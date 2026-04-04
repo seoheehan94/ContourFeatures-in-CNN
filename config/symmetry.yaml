@@ -1,0 +1,63 @@
+# config/symmetry.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+# All paths and run parameters for the symmetry nested-model pipeline.
+# Override any value by setting the corresponding environment variable or by
+# passing a different config file to run_symmetry.py.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Data roots ────────────────────────────────────────────────────────────────
+# Set these to the absolute paths on your machine / cluster.
+# On the lab server these were under /bwlab/Projects/NeuralNetOrientation_Napasorn
+# and /bwdata/NSDData — do NOT commit real paths; use environment variables or
+# a local override file (e.g. config/local.yaml, which is git-ignored).
+project_root: "${PROJECT_ROOT}"          # e.g. /bwlab/Projects/NeuralNetOrientation_Napasorn
+stimuli_root: "${STIMULI_ROOT}"          # e.g. /bwdata/NSDData/stimuli
+
+# ── Derived paths (relative to project_root unless absolute) ──────────────────
+paths:
+  orientation_dir:  "${project_root}/orientation/OribinMapsResults"
+  sym_maps_dir:     "${project_root}/SymbinMapsResults"
+  preprocessed_pt:  "${project_root}/symmetry/maps_pt1"          # .pt tensors
+  results_dir:      "${project_root}/symmetry/NestedModelResults_FINAL"
+  plots_dir:        "${project_root}/symmetry/NestedModelResults_FINAL/plots"
+
+# ── Experiment parameters ─────────────────────────────────────────────────────
+experiment:
+  num_images_per_batch: 14600
+  num_batches: 5
+  image_size: [425, 425]
+  save_interval: 100           # checkpoint every N images
+
+# ── Symmetry types to run ─────────────────────────────────────────────────────
+sym_types:
+  - mir
+  - par
+  - tap
+
+# ── Map types produced per symmetry run ──────────────────────────────────────
+map_types:
+  - contour
+  - medial
+  - area
+
+# ── Statistical testing ───────────────────────────────────────────────────────
+statistics:
+  alpha: 0.05          # BH-FDR significance threshold
+
+# ── VGG16 layer metadata ──────────────────────────────────────────────────────
+vgg16:
+  layer_names:
+    - "conv1-1"
+    - "conv1-2"
+    - "conv2-1"
+    - "conv2-2"
+    - "conv3-1"
+    - "conv3-2"
+    - "conv3-3"
+    - "conv4-1"
+    - "conv4-2"
+    - "conv4-3"
+    - "conv5-1"
+    - "conv5-2"
+    - "conv5-3"
+  channels: [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
