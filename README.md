@@ -8,57 +8,58 @@ We analyze internal representations of **VGG16** across 73,000 natural images fr
 
 ## Project Overview
 
-<table style="border: 1px solid #ccc; border-collapse: collapse;">
+<table style="border: 1px solid #ccc; border-collapse: collapse; width:100%;">
 <tr>
 
-<td width="50%" style="border: 1px solid #ccc; vertical-align: top;">
+<td width="50%" style="border: 1px solid #ccc; vertical-align: top; text-align:center;">
 
-<div align="center">
+<h3>Orientation Analysis</h3>
 
-### Orientation Analysis
+<img src="docs/orient_intro.PNG" width="80%" style="display:block; margin: 0 auto; vertical-align:middle;">
 
-We study how CNN feature maps encode orientation information across layers.
+<p>We study how CNN feature maps encode orientation information across layers.</p>
 
-</div>
-
-- Analyzed **CONV1-1 layer (64 channels)** and **CONV5-3 layer (512 channels)** feature maps  
-- Compared with orientation representations from:
-  - contour  
-  - line drawing  
-  - photo pipelines  
-- Used **Pearson correlation** across 180° bins  
-
-<p align="center">
-  <img src="docs/orient_intro.png" width="80%">
-</p>
+<ul style="text-align:left;">
+  <li>Analyzed <strong>CONV1-1 layer (64 channels)</strong> and <strong>CONV5-3 layer (512 channels)</strong> feature maps</li>
+  <li>Compared with orientation representations from:
+    <ul>
+      <li>contour</li>
+      <li>line drawing</li>
+      <li>photo pipelines</li>
+    </ul>
+  </li>
+  <li>Used <strong>Pearson correlation</strong> across 180° bins</li>
+</ul>
 
 </td>
 
-<td width="50%" style="border: 1px solid #ccc; vertical-align: top;">
+<td width="50%" style="border: 1px solid #ccc; vertical-align: top; text-align:center;">
 
-<div align="center">
+<h3>Symmetry Analysis</h3>
 
-### Symmetry Analysis
+<img src="docs/sym_intro.PNG" width="80%" style="display:block; margin: 0 auto; vertical-align:middle;">
 
-We investigate whether CNNs capture symmetry-related structure.
+<p>We investigate whether CNNs capture symmetry-related structure.</p>
 
-</div>
-
-- Analyzed all convolutional layers of VGG16  
-- Examined:
-  - contour symmetry  
-  - medial-axis symmetry  
-  - area-based symmetry  
-- Tested across:
-  - parallel  
-  - mirror  
-  - taper structures  
-- Used **hierarchical (nested) regression**  
-- Measured **ΔR² contribution** of symmetry features  
-
-<p align="center">
-  <img src="docs/sym_intro.PNG" width="80%">
-</p>
+<ul style="text-align:left;">
+  <li>Analyzed all convolutional layers of VGG16</li>
+  <li>Examined:
+    <ul>
+      <li>contour symmetry</li>
+      <li>medial-axis symmetry</li>
+      <li>area-based symmetry</li>
+    </ul>
+  </li>
+  <li>Tested across:
+    <ul>
+      <li>parallel</li>
+      <li>mirror</li>
+      <li>taper structures</li>
+    </ul>
+  </li>
+  <li>Used <strong>hierarchical (nested) regression</strong></li>
+  <li>Measured <strong>ΔR² contribution</strong> of symmetry features</li>
+</ul>
 
 </td>
 
@@ -67,12 +68,11 @@ We investigate whether CNNs capture symmetry-related structure.
 
 <!-- poster button -->
 <p align="center">
-  <a href="docs/rop_poster.png" target="_blank" 
-     style="background-color:#4CAF50; color:white; padding:10px 20px; text-align:center; text-decoration:none; display:inline-block; border-radius:5px; font-weight:bold;">
+  <a href="docs/rop_poster.pdf" target="_blank" 
+     style="background-color:#6031ff; color:black; padding:10px 20px; text-align:center; text-decoration:none; display:inline-block; border-radius:5px; font-weight:bold;">
     Click to View the Poster
   </a>
 </p>
----
 
 ## Installation / Setup
 
