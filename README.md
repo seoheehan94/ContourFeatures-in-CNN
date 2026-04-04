@@ -15,7 +15,7 @@ We analyze internal representations of **VGG16** across 73,000 natural images fr
 
 <h3>Orientation Analysis</h3>
 
-<img src="docs/orient_intro.png" width="80%" style="display:block; margin: 0 auto; vertical-align:middle;">
+<img src="docs/orient_intro.PNG" width="80%" style="display:block; margin: 0 auto; vertical-align:middle;">
 
 <p>We study how CNN feature maps encode orientation information across layers.</p>
 
@@ -68,12 +68,11 @@ We analyze internal representations of **VGG16** across 73,000 natural images fr
 
 <!-- poster button -->
 <p align="center">
-  <a href="docs/rop_poster.png" target="_blank" 
+  <a href="docs/rop_poster.pdf" target="_blank" 
      style="background-color:#6031ff; color:black; padding:10px 20px; text-align:center; text-decoration:none; display:inline-block; border-radius:5px; font-weight:bold;">
     Click to View the Poster
   </a>
 </p>
----
 
 ## Installation / Setup
 
