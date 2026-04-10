@@ -120,8 +120,9 @@ ContourFeatures-in-CNN/
 
 ## References
 
-- Allen, E.J. et al. (2022). **A massive 7T fMRI dataset to bridge cognitive neuroscience and artificial intelligence.** *Nature Neuroscience.* → [naturalscenesdataset.org](https://naturalscenesdataset.org/)
-- Simonyan, K. & Zisserman, A. (2015). **Very Deep Convolutional Networks for Large-Scale Image Recognition.** *ICLR.*
+- Allen, E. J., et al. (2022). A massive 7T fMRI dataset to bridge cognitive neuroscience and artificial intelligence. Nature Neuroscience. → https://naturalscenesdataset.org/
+- Simonyan, K., & Zisserman, A. (2015). Very Deep Convolutional Networks for Large-Scale Image Recognition. ICLR.
+- Bernhardt-Walther Lab (University of Toronto). (n.d.). MLV Toolbox. GitHub repository. → https://github.com/bwlabToronto/MLV_toolbox
 
 <br>
 
